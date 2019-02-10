@@ -1,0 +1,55 @@
+{
+  "name": "pollyjs-example",
+  "version": "1.0.0",
+  "description": "A repo to experiment with Polly.JS",
+  "main": "index.js",
+  "author": "Freddy Fallon",
+  "license": "MIT",
+  "devDependencies": {
+    "@pollyjs/adapter-node-http": "^2.1.0",
+    "@pollyjs/core": "^2.1.0",
+    "@pollyjs/persister-fs": "^2.1.0",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "jest": "^24.1.0",
+    "prettier": "^1.16.4",
+    "setup-polly-jest": "^0.5.2"
+  },
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./tests/setupTests.js"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error"
+      ]
+    },
+    "env": {
+      "es6": true,
+      "node": true,
+      "jest": true
+    }
+  }
+}
